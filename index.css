@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #E4E5EA;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  height: 55px;
+  display: flex;
+  padding: 0px 20px;
+  font-size: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main {
+  background: url('./img/bg.png') center / cover no-repeat;
+  padding: 40px 0px 60px 14px;
+}
+
+.title {
+  line-height: 43px;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.title__span {
+  font-weight: 900;
+  background: linear-gradient(to right, #FCB045, #FF3F78);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title__desc {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 22px;
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+.desc {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 48px;
+}
+
+.desc__span {
+  /* background: linear-gradient(to right, #FCB045, #FD1D1D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #FCB045;
+}
+
+.gifts__block {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 140px);
+}
+
+.gift {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+
+.line {
+  height: 1px;
+  width: 10px;
+  margin-right: 5px;
+  background: linear-gradient(to right, #FCB045, #FD1D1D);
+}
+
+footer {
+  padding: 45px 14px 60px;
+}
+
+.title__info {
+  color: #656566;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.items {
+  margin-top: 20px;
+}
+
+.item {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.item a {
+  text-decoration: none;
+}
+
+.menu,
+.contacts {
+  margin-top: 30px;
+}
+
+.items__menu {
+  display: grid;
+  column-gap: 48px;
+  grid-template-columns: repeat(auto-fit, 120px);
+}
+
+.phone {
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.copyright {
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
