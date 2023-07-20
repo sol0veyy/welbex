@@ -57,10 +57,14 @@ main {
   margin-top: 48px;
 }
 
-.desc__span {
-  /* background: linear-gradient(to right, #FCB045, #FD1D1D);
+.desc__span:nth-of-type(1) {
+  font-weight: bold;
+  background: linear-gradient(to right, #FCB045, #FD1D1D);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
+}
+
+.desc__span:nth-of-type(2) {
   color: #FCB045;
 }
 
@@ -83,7 +87,7 @@ main {
   height: 1px;
   width: 10px;
   margin-right: 5px;
-  background: linear-gradient(to right, #FCB045, #FD1D1D);
+  background: linear-gradient(to right, #FCB045 30%, #FD1D1D);
 }
 
 footer {
