@@ -9,26 +9,101 @@
 
 body {
   background-color: black;
+
+  @media (min-width: 1024px) {
+    background: url('./img/bg-desktop.png') center / cover no-repeat;
+    padding: 0px 150px;
+  }
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+    background-color: inherit;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+  }
+}
+
+.logo {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.logo p {
+  width: 160px;
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
 }
 
 nav {
   height: 55px;
   display: flex;
   padding: 0px 20px;
-  font-size: 12px;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    height: auto;
+    flex-grow: 1;
+    margin-right: 130px;
+    justify-content: space-around;
+  }
 }
 
 nav a {
   font-weight: 500;
+  font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: 1024px) {
+    font-size: 16px;
+    text-transform: none;
+  }
+}
+
+.nav__none {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: inline;
+  }
+}
+
+.header__contacts {
+  display: none;
+
+  @media (min-width: 1024px) {   
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+.header__contacts .icons {
+  gap: 30px;
+  padding: 0;
 }
 
 main {
   background: url('./img/bg.png') center / cover no-repeat;
-  padding: 40px 0px 60px 14px;
+  padding: 95px 0px 60px 14px;
+
+  @media (min-width: 1024px) {
+    background: none;
+  }
 }
 
 .title {
