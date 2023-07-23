@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  color: #E4E5EA;
+  color: #e4e5ea;
 }
 
 body {
@@ -85,7 +85,7 @@ nav a {
 .header__contacts {
   display: none;
 
-  @media (min-width: 1024px) {   
+  @media (min-width: 1024px) {
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -102,7 +102,11 @@ main {
   padding: 95px 0px 60px 14px;
 
   @media (min-width: 1024px) {
+    padding-left: 0;
+    padding-right: 0;
     background: none;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -110,18 +114,22 @@ main {
   line-height: 43px;
   font-weight: 400;
   font-size: 36px;
+
+  @media (min-width: 1024px) {
+    line-height: normal;
+    font-size: 48px;
+  }
 }
 
 .title__span {
   font-weight: 900;
-  background: linear-gradient(to right, #FCB045, #FF3F78);
+  background: linear-gradient(to right, #fcb045, #ff3f78);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .title__desc {
   font-family: 'Montserrat', sans-serif;
-  line-height: 22px;
   font-size: 18px;
   margin-top: 16px;
 }
@@ -130,23 +138,58 @@ main {
   font-weight: 500;
   font-size: 18px;
   margin-top: 48px;
+
+  @media screen {
+    margin-top: 0;
+  }
+}
+
+.desc__span {
+  @media (min-width: 1024px) {
+    text-transform: uppercase;
+  }
 }
 
 .desc__span:nth-of-type(1) {
   font-weight: bold;
-  background: linear-gradient(to right, #FCB045, #FD1D1D);
+  background: linear-gradient(to right, #fcb045, #fd1d1d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .desc__span:nth-of-type(2) {
-  color: #FCB045;
+  color: #fcb045;
 }
 
 .gifts__block {
-  margin-top: 8px;
+  margin-top: 45px;
+
+  @media (min-width: 1024px) {
+    margin-top: 0px;
+    width: 310px;
+    text-align: right;
+  }
+}
+
+.gifts {
   display: grid;
+  align-items: end;
   grid-template-columns: repeat(auto-fit, 140px);
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.gifts__desktop {
+  display: none;
+
+  @media (min-width: 1024px) {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 140px);
+    margin-top: 35px;
+  }
 }
 
 .gift {
@@ -156,17 +199,55 @@ main {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
+
+  @media (min-width: 1024px) {
+    flex-flow: column;
+    align-items: end;
+    text-transform: none;
+    gap: 6px;
+  }
+}
+
+.gift__title {
+  letter-spacing: 0.9px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.gift__desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.gift__btn {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: inline;
+    cursor: pointer;
+    margin-top: 60px;
+    padding: 21px 35px;
+    background-color: #4077f3;
+    border: none;
+  }
 }
 
 .line {
   height: 1px;
   width: 10px;
   margin-right: 5px;
-  background: linear-gradient(to right, #FCB045 30%, #FD1D1D);
+  background: linear-gradient(to right, #fcb045 30%, #fd1d1d);
 }
 
 footer {
-  padding: 45px 14px 60px;
+  padding: 45px 14px 0px;
+
+  @media (min-width: 1024px) {
+    padding: 45px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .title__info {
@@ -176,8 +257,17 @@ footer {
   font-size: 12px;
 }
 
-.items {
+.items,
+.contacts__items {
   margin-top: 20px;
+}
+
+.contacts__items {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+  }
 }
 
 .item {
@@ -189,15 +279,38 @@ footer {
   text-decoration: none;
 }
 
+.about__company,
+.menu,
+.contacts {
+  @media (min-width: 1024px) {
+    flex: 1;
+  }
+}
+
 .menu,
 .contacts {
   margin-top: 30px;
+
+  @media (min-width: 1024px) {
+    margin-top: 0;
+  }
+}
+
+.contacts {
+  @media (min-width: 1024px) {
+    text-align: end;
+  }
 }
 
 .items__menu {
   display: grid;
   column-gap: 48px;
   grid-template-columns: repeat(auto-fit, 120px);
+
+  @media (min-width: 1024px) {
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, 180px);
+  }
 }
 
 .phone {
@@ -208,6 +321,11 @@ footer {
   display: flex;
   gap: 12px;
   padding: 12px 0px;
+
+  @media (min-width: 1024px) {
+    padding: 0;
+    justify-content: end;
+  }
 }
 
 .icon {
@@ -215,7 +333,12 @@ footer {
 }
 
 .copyright {
-  margin-top: 50px;
+  margin: 50px 15px 60px;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
+
+  @media (min-width: 1024px) {
+    margin: 30px 0px 20px;
+    text-align: end;
+  }
 }
